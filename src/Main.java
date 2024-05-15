@@ -11,7 +11,7 @@ public class Main {
         System.out.println("1- factorielle de 5 : " + IntStream.range(1,6).reduce(1, (a, b)-> a*b));
 
         // 2- somme des nombres jusqu'à 3
-        System.out.println("2- fibonacci 3 : " + (IntStream.range(1,4).sum()));
+        System.out.println("2- somme des nombres jusqu'à 3 : " + (IntStream.range(1,4).sum()));
 
         // 3- fizz buzz 50
         System.out.println("3- fizz buzz 50 : ");
