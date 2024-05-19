@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.math.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -35,7 +36,7 @@ public class Main {
         // variante : renvoyer une liste
         System.out.println("Variante avec une liste : " + Arrays.stream(citation.split(" ")).filter(x-> x.contains("oi")).toList());
 
-        // fast comparison -> écart le moins important entre différents nombres
+        // 6- fast comparison -> écart le moins important entre différents nombres
         System.out.println("6 - fast comparison (no double loop) : différence la moins élevés entre plusieurs nombres");
         Integer[] arrToCompare = {4, 5, 8, 9};
         List<Integer> result = new ArrayList<>();
@@ -45,6 +46,19 @@ public class Main {
         }
         System.out.println("Smaller= " + Collections.min(result));
 
+        // 7- Equals with no null pointer exception
+        System.out.println("7 - Equals with no null pointer exception");
+        System.out.print("Test Ok : ");
+        Arrays.stream(citation.split(" "))
+                .filter(x -> Objects.equals(x, "adroit"))
+                .peek(System.out::println)
+                .toList();
+
+        System.out.print("Test NOk : ");
+        Arrays.stream(citation.split(" "))
+                .filter(x -> Objects.equals(x, "droit"))
+                .peek(System.out::println)
+                .toList();
 
     }
 }
