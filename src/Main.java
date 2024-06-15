@@ -6,6 +6,7 @@ import java.util.stream.IntStream;
 
 public class Main {
 
+
     public static void main(String[] args) {
 
         // 1- factorielle 5
@@ -75,5 +76,7 @@ public class Main {
             }
         }
         System.out.println("Modify Toto TATA Titi TUTU Tota TOTA into : " +bar);
+        
+
     }
 }
