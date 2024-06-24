@@ -29,6 +29,7 @@ public class Main {
 
         // variante : renvoyer une liste
         System.out.println("Variante avec une liste : " + Arrays.stream(citation.split(" ")).filter(x -> x.contains("oi")).toList());
+        System.out.println("Variante avec une liste et pas oi: " + Arrays.stream(citation.split(" ")).filter(x -> !x.contains("oi")).toList());
 
         // 5- search letters in string
         System.out.println("5- search letters in string : 'o' or 'i' ");
