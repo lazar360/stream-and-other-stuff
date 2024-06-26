@@ -75,5 +75,9 @@ public class Main {
             }
         }
         System.out.println("Modify Toto TATA Titi TUTU Tota TOTA into : " +bar);
+
+        // 9- In a list : return true if there is int > 8
+        System.out.println("In a list : return true if there is int > 8 " + Arrays.stream(arrToCompare).anyMatch(num -> num > 8));
+
     }
 }
