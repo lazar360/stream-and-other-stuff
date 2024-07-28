@@ -19,6 +19,14 @@ public class Main {
         System.out.println("3- fizz buzz 50 : ");
         IntStream.range(1, 51).forEach(x -> System.out.println(x + " : " + (x % 2 == 0 ? "Fizz" : x % 3 == 0 ? "Buzz" : " ")));
 
+        // variante : renvoyer une liste
+        List<String> listFizz = IntStream.range(1, 100)
+        .mapToObj(i -> i % 3 == 0 && i % 5 == 0 ? "FizzBuzz" :
+                i % 3 == 0 ? "Fizz" :
+                        i % 5 == 0 ? "Buzz" : String.valueOf(i))
+        .toList();
+        System.out.println(listFizz);
+
         // 4- search letters sequence in string
         String citation = "Je suis adroit de la main droite et gauche de la main gauche";
         System.out.println("4- search sequence in string : \"oi\"");
@@ -80,6 +88,13 @@ public class Main {
 
         // 9- In a list : return true if there is int > 8
         System.out.println("In a list : return true if there is int > 8 " + Arrays.stream(arrToCompare).anyMatch(num -> num > 8));
+
+        // 10- Generate random int with no duplicate
+        Random random = new Random();
+        Set<Integer> setInt = new HashSet<>(9);
+        while(setInt.size()<9){
+        setInt.add(random.ints(0,10).findFirst().getAsInt());
+        }
 
     }
 }
