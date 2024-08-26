@@ -9,12 +9,12 @@ public class OtherStuff {
         // 1- factorielle 5
         System.out.println("1- factorielle de 5 : " + IntStream.range(1, 6).reduce(1, (a, b) -> a * b));
 
+        // 2- somme des nombres jusqu'à 3
+        System.out.println("2- somme des nombres jusqu'à 3 : " + (IntStream.range(1, 4).sum()));
+
         // 3- fizz buzz 50
         System.out.println("3- fizz buzz 50 : ");
         IntStream.range(1, 51).forEach(x -> System.out.println(x + " : " + (x % 2 == 0 ? "Fizz" : x % 3 == 0 ? "Buzz" : " ")));
-
-        // 2- somme des nombres jusqu'à 3
-        System.out.println("2- somme des nombres jusqu'à 3 : " + (IntStream.range(1, 4).sum()));
 
         // 4- search letters sequence in string
         String citation = "Je suis adroit de la main droite et gauche de la main gauche";
