@@ -184,7 +184,6 @@ public class Stream {
                                         element -> element,
                                         (element1, element2) -> element1 + ", " + element2));
 
-        System.out.println("Map avec peek");
         map3.forEach((key, value) -> System.out.println(key + " :: " + value));
 
         // 4- debugging stream
@@ -196,8 +195,6 @@ public class Stream {
                         .map(String::toUpperCase)
                         .peek(s -> System.out.println("Mapped = " + s))
                         .toList();
+
     }
-
-
-
 }
